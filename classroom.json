@@ -1,0 +1,17 @@
+{
+  "_uitleg": "Wordt gelezen door _tools/zet_opdracht_klaar.py (zie _tools/CLASSROOM-KOPPELING.md). Dit bestand staat openbaar op GitHub: zet hier nooit een e-mailadres of wachtwoord in. {deadline} vult het script zelf in; de deadline komt uit lesdoelen.json. Geen werkdocument (Jonas, 06-11-2026): elke leerling voegt de link naar het Canva-ontwerp van de groep toe met Toevoegen of maken › Link en klikt op Inleveren.",
+  "titel": "Projectles 3 — Afwerken en inleveren",
+  "onderwerp": "Project Dalton @ the movies",
+  "punten": 20,
+  "instructie": [
+    "1. Open de lespagina (link): daar staan de stappen en de checklist van je trailer.",
+    "2. Je werkt in het Canva-ontwerp van je groep. Je hebt je gsm nodig, met de Canva-app, en oortjes als je die hebt.",
+    "3. Iedereen van de groep voegt hier de link naar jullie Canva-ontwerp toe (Toevoegen of maken › Link) en klikt op Inleveren, ten laatste {deadline}."
+  ],
+  "bijlagen": [
+    {
+      "soort": "link",
+      "url": "https://jonasdaltongent.github.io/Trailer-DaltonMovies/"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afwerken en inleveren · dia's · Dalton @ the movies</title>
+  <link rel="icon" href="assets/movies-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/slides.css">
+  <style>
+    .klok { font-size: 22px; color: #4D5573; }
+    .compact .two { flex: 0 0 auto; }
+    .compact .panel p { margin-bottom: 10px; }
+    .compact .panel p:last-child { margin-bottom: 0; }
+    .steps2 { columns: 2; column-gap: 40px; margin: 0; }
+    .steps2 li { font-size: 25px; margin-bottom: 6px; break-inside: avoid; }
+    .steps1 { margin: 0; padding-left: 1.2em; }
+    .steps1 li { font-size: 27px; margin-bottom: 9px; }
+    .steps1 li:last-child { margin-bottom: 0; }
+    .qcol .opt { font-size: 26px; padding: 10px 18px; }
+    /* Een nagemaakt venster "Nieuw bericht" (dia 4 en 6) */
+    .venster { background: #fff; border: 2px solid #C4C7C5; border-radius: 14px 14px 8px 8px; overflow: hidden; font-family: Arial, sans-serif; color: #202124; box-shadow: 0 8px 24px rgba(29,35,64,.15); }
+    .venster .vk { background: #F2F6FC; font-weight: 700; font-size: 20px; padding: 8px 18px; }
+    .venster .vv { display: flex; gap: 16px; border-bottom: 1px solid #E3E3E3; padding: 7px 18px; font-size: 20px; }
+    .venster .vv span:first-child { color: #5F6368; width: 110px; flex-shrink: 0; }
+    .venster .vt { padding: 12px 18px 6px; font-size: 20px; }
+    .venster .vt p { font-size: 20px; margin: 0 0 12px; line-height: 1.35; }
+    .venster .lijn { display: block; height: 10px; border-radius: 5px; background: #E1E3EC; margin: 0 0 10px; }
+    .venster .vf { padding: 4px 18px 14px; }
+    .venster .verz { display: inline-block; background: #0B57D0; color: #fff; font-weight: 700; font-size: 18px; border-radius: 99px; padding: 5px 20px; }
+    .leeg { color: #A0372A; font-style: italic; }
+    /* dia 4: zes delen, met labels die één voor één verschijnen */
+    .delen { display: grid; grid-template-columns: 1fr 400px; gap: 30px; flex: 1; min-height: 0; align-items: start; }
+    .labels { list-style: none; padding: 0 !important; margin: 0; counter-reset: d; }
+    .labels li { counter-increment: d; font-size: 24px; line-height: 1.2; margin: 0 0 9px; display: flex; align-items: center; gap: 14px; }
+    .labels li::before { content: counter(d); width: 38px; height: 38px; flex-shrink: 0; border-radius: 50%; background: var(--navy); color: #fff; font-family: "Montserrat", Arial, sans-serif; font-weight: 900; font-size: 20px; display: grid; place-items: center; }
+    /* dia 5: twee tabbladen */
+    .tabbalk { display: flex; gap: 6px; background: #DEE1E6; border-radius: 14px 14px 0 0; padding: 10px 12px 0; font-family: Arial, sans-serif; }
+    .tabbalk span { background: #F1F3F4; border-radius: 10px 10px 0 0; padding: 10px 22px; font-size: 21px; color: #3C4043; }
+    .tabbalk span.aan { background: #fff; font-weight: 700; color: #202124; }
+    .tabonder { background: #fff; border: 2px solid #DEE1E6; border-top: 0; border-radius: 0 0 14px 14px; height: 40px; }
+    .uitleg3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 26px; }
+    .uitleg3 .panel { font-size: 24px; line-height: 1.35; }
+    .uitleg3 .panel b { display: block; font-family: "Montserrat", Arial, sans-serif; color: var(--navy-deep); font-size: 26px; margin-bottom: 6px; }
+    .rij1 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+    .rij1 .panel { font-size: 24px; }
+    /* dia 6: twee kleine vensters naast elkaar */
+    .twee { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+    .twee .venster .vv { font-size: 19px; padding: 6px 16px; }
+    .twee .venster .vv span:first-child { width: 96px; }
+    .twee .venster .vk { font-size: 19px; padding: 6px 16px; }
+    .twee .wie { font-family: "Montserrat", Arial, sans-serif; font-weight: 800; font-size: 24px; color: var(--navy-deep); margin: 0 0 6px; }
+    .vast5 { font-size: 26px; line-height: 1.5; }
+
+    .tlb { margin-top: 10px; }
+    .vakken4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 8px; }
+    .vakken4 .panel { font-size: 24px; line-height: 1.3; padding: 16px 18px; }
+    .vakken4 .panel b { display: block; font-family: "Montserrat", Arial, sans-serif; color: var(--navy-deep); font-size: 24px; margin-bottom: 4px; }
+    .vakken4 .panel.hier { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .vakken4 .panel.hier b { color: #fff; }
+    .rol3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 8px; }
+    .rol3 .panel { font-size: 25px; line-height: 1.35; }
+    .rol3 .panel b { display: block; font-family: "Montserrat", Arial, sans-serif; color: var(--navy-deep); font-size: 28px; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+<div class="hud"><span id="counter"></span> · <kbd>→</kbd> verder · <kbd>F</kbd> volledig scherm · <kbd>N</kbd> notities</div>
+<div class="deck"><div class="stage">
+
+<!-- 1 · vaste startdia -->
+<section class="slide start">
+  <div class="start-kop">
+    <div>
+      <p class="kicker">Toegepaste Informatica · projectles 3</p>
+      <h1>Afwerken en inleveren</h1>
+    </div>
+    <span class="start-zo">Zo start je</span>
+  </div>
+  <ol class="startroute">
+    <li><div class="sr-beeld"><div class="pc-scherm"><span class="pc-avatar"></span><span class="pc-veld">••••••</span></div><div class="pc-voet"></div></div><span class="sr-tekst">Meld je aan op de computer.</span></li>
+    <li><div class="sr-beeld"><span class="url-balk"><img class="logo" src="assets/logos/classroom.svg" alt="">classroom.google.com</span><span class="url-knop">Inloggen</span></div><span class="sr-tekst">Ga in Chrome naar Classroom. Klik op <span class="knop">Inloggen</span>.</span></li>
+    <li><div class="sr-beeld"><span class="login-veld">…<b>@dalton.gent</b></span><span class="login-veld">••••••••</span></div><span class="sr-tekst">Log in met je schoolaccount.</span></li>
+    <li><div class="sr-beeld"><div class="lesgroep"><span class="lesgroep-kop">3MWWE - Informatica</span></div></div><span class="sr-tekst">Klik op je lesgroep.</span></li>
+    <li><div class="sr-beeld"><div class="tabs"><span class="tab-grijs"></span><span class="tab-aan">Schoolwerk</span><span class="tab-grijs"></span></div></div><span class="sr-tekst">Klik op <span class="knop">Schoolwerk</span>.</span></li>
+    <li><div class="sr-beeld"><span class="opdr-rij"><span class="opdr-ic"></span>Projectles 3 — Afwerken en inleveren</span><span class="opdr-link">Instructies bekijken</span></div><span class="sr-tekst">Klik op de opdracht › <span class="knop">Instructies bekijken</span>.</span></li>
+    <li><div class="sr-beeld"><span class="bijl-chip aan"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Projectles 3</span></div><span class="sr-tekst">Klik op de lespagina.</span></li>
+    <li class="klaar">Klaar? Laat de lespagina open en kijk naar het bord.</li>
+  </ol>
+  <template class="note">
+    <p><strong>Instructie, 0–1'. De vaste startdia</strong> (elke les dezelfde, voor alle klassen). Laat ze op het bord staan terwijl de leerlingen aanmelden.</p>
+    <p>Het <strong>wachtwoord van de computers</strong> staat niet op de dia: de dia's staan openbaar online. Zeg het, of schrijf het op het bord.</p>
+    <p>Vraag ook of iedereen <strong>oortjes</strong> heeft: bij het nakijken speelt elke groep de trailer af. Ga verder als de meesten de lespagina open hebben.</p>
+  </template>
+</section>
+
+<!-- 2 · lesstart -->
+<section class="slide met-mascotte" data-answer>
+  <img class="mascotte" src="assets/mascotte/dalton_denken.webp" alt="" width="240" height="240">
+  <p class="kicker">Lesstart · 2 minuten</p>
+  <h2>Weet je het nog?</h2>
+  <div class="qcol">
+    <p style="font-size:30px;font-weight:700;margin:0 0 8px">Jullie muziek is zo luid dat je de personages niet meer verstaat. Wat doe je?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">A</span>De muziek verwijderen</div>
+      <div class="opt right"><span class="n">B</span>Het nummer aanklikken › <strong>Volume</strong> lager</div>
+      <div class="opt"><span class="n">C</span>De clips opnieuw filmen</div>
+    </div>
+  </div>
+  <p class="answer">Het nummer aanklikken en het volume lager zetten (of <em>Alles evenwichtig maken</em>). Muziek hoort onder de stemmen.</p>
+  <template class="note">
+    <p><strong>Lesstart (2'), ophalen uit projectles 2.</strong> Iedereen antwoordt tegelijk met vingers: 1, 2 of 3 vingers voor A, B of C. Druk daarna op → voor het antwoord.</p>
+    <p>Bouw de brug: <em>"Vandaag werken jullie de trailer af en leveren jullie hem in. Zo kijk ik hem na."</em></p>
+  </template>
+</section>
+
+<!-- 3 · lesdoel en checklist met punten -->
+<section class="slide met-mascotte">
+  <img class="mascotte" src="assets/mascotte/dalton_wijzen_links.webp" alt="" width="240" height="240">
+  <p class="kicker">Ik doe · dia 1 van 3 · wat telt</p>
+  <h2>Hier krijg je punten voor</h2>
+  <ul class="punten7">
+    <li class="reveal-item">Het trailerrecept, het einde niet verklapt <em>4</em></li>
+    <li class="reveal-item">Montage: geen lege of zwarte stukken <em>3</em></li>
+    <li class="reveal-item">De titel: groot en leesbaar <em>2</em></li>
+    <li class="reveal-item">Overgangen: weinig, dezelfde soort <em>2</em></li>
+    <li class="reveal-item">Muziek uit Canva, zachter dan de stemmen <em>3</em></li>
+    <li class="reveal-item">De aftiteling: namen en muziek met titel en maker <em>3</em></li>
+    <li class="reveal-item">Ingeleverd: de link, door jou zelf, vóór vrijdag 20.00 uur <em>3</em></li>
+    <li class="totaal reveal-item">Samen <em>20</em></li>
+  </ul>
+  <template class="note"><p><strong>Ik doe, 1'30".</strong> Druk op → voor elke rij. Het lesdoel voorlezen, niet toelichten: <em>"Vandaag werken jullie de trailer af en leveren jullie de link in."</em> Zeg: de checklist op de lespagina bevat dezelfde zeven dingen. Ik kijk de trailer na in Canva, via de link die jullie inleveren. Criterium 1 tot 6 gaan over het ontwerp van de groep, het zevende is per leerling.</p></template>
+</section>
+
+<!-- 4 · demo -->
+<section class="slide">
+  <p class="kicker">Ik doe · dia 2 van 3 · demo live in Canva en Classroom</p>
+  <h2>Drie dingen die je moet zien</h2>
+  <div class="demo2" style="grid-template-columns:repeat(3,1fr);gap:18px">
+    <div class="panel reveal-item"><b>De aftiteling</b>
+      <ol>
+        <li>Rechts van de laatste clip <strong>+</strong> › <strong>Leeg</strong></li>
+        <li><strong>Tekst</strong> › <strong>Voeg een tekstvak toe</strong></li>
+        <li>Voornamen, en de muziek met titel, maker en Canva</li>
+      </ol></div>
+    <div class="panel reveal-item"><b>Delen</b>
+      <ol>
+        <li><strong>Delen</strong> › Toegangsniveau: <strong>GO! Dalton Gent</strong></li>
+        <li>Rol: <strong>Mag bekijken</strong></li>
+        <li><strong>Link kopiëren</strong></li>
+      </ol></div>
+    <div class="panel reveal-item"><b>Inleveren</b>
+      <ol>
+        <li>Classroom, bij <strong>Jouw werk</strong>: <strong>Toevoegen of maken</strong> › <strong>Link</strong></li>
+        <li>Plakken en toevoegen</li>
+        <li><strong>Inleveren</strong></li>
+      </ol></div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 3' — live in Canva en Classroom, hardop denkend.</strong> Je eigen video-ontwerp met twee of drie stockvideo's en een nummer uit Canva (Video › Liggende video; in de tijdlijn bij + › Stockvideo's). Druk op → voor elk paneel, toon het dan.</p>
+    <ol>
+      <li><strong>Aftiteling</strong>: in de tijdlijn rechts van de laatste clip op het + › <em>Leeg</em>. Klik op de nieuwe pagina, <em>Tekst</em> › <em>Voeg een tekstvak toe</em>. Typ <em>Een trailer van</em> en de voornamen, eronder <em>Muziek: "Titel" – Maker (Canva)</em>. <em>"Alleen voornamen: de trailer wordt getoond."</em></li>
+      <li><strong>Delen</strong>: <em>Delen</em> › Toegangsniveau op <em>GO! Dalton Gent</em>. <em>"Bekijken, niet bewerken: niemand mag jullie trailer nog veranderen."</em> Dan <em>Link kopiëren</em>. Zeg: alleen de eigenaar stelt dit in (nog na te kijken, zie de README).</li>
+      <li><strong>Inleveren</strong>: in Classroom bij <em>Jouw werk</em> › <em>Toevoegen of maken</em> › <em>Link</em>, plakken, toevoegen, <em>Inleveren</em>. <em>"Elk groepslid doet dit zelf."</em></li>
+    </ol>
+    <p>Knopnamen kunnen op jouw scherm anders heten dan op de lespagina: jouw scherm wint (zie de README).</p>
+  </template>
+</section>
+
+<!-- 5 · de aftiteling -->
+<section class="slide">
+  <p class="kicker">Ik doe · dia 3 van 3 · kijk naar de laatste pagina</p>
+  <h2>Zo ziet de aftiteling eruit</h2>
+  <div class="twee-kol">
+    <div class="aftit5" role="img" aria-label="Tekening van de aftiteling: een donkere pagina met de tekst Een trailer van, drie voornamen, en eronder Muziek, de titel tussen aanhalingstekens, een streepje, de maker en Canva tussen haakjes."><b>Een trailer van Voornaam, Voornaam en Voornaam</b><span>Muziek: “Titel” – Maker (Canva)</span></div>
+    <div>
+      <div class="panel reveal-item" style="font-size:26px;margin-bottom:14px"><strong>Namen</strong>: alleen jullie voornamen</div>
+      <div class="panel reveal-item" style="font-size:26px;margin-bottom:14px"><strong>Muziek</strong>: de titel, de maker en <strong>Canva</strong></div>
+      <div class="panel reveal-item" style="font-size:26px"><strong>Een witte of zwarte pagina</strong> achteraan, 5 seconden</div>
+    </div>
+  </div>
+  <template class="note"><p><strong>Ik doe, 0'30".</strong> Een nieuwe tekening: lees ze de eerste keer hardop voor. <em>"Dit is de laatste pagina van de trailer. Bovenaan staat wie de trailer maakte, eronder van wie de muziek is: de titel, de maker en Canva."</em> Druk op → voor elk paneel. Kijk naar de twee regels: elke regel hoort bij één paneel rechts.</p></template>
+</section>
+
+<!-- 6 · controle -->
+<section class="slide" data-answer>
+  <p class="kicker">Controle · iedereen antwoordt</p>
+  <h2>Wat staat er bij de muziek?</h2>
+  <div class="qcol">
+    <p style="font-size:30px;font-weight:700;margin:0 0 8px">Wat moet er bij de muziek in de aftiteling staan?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">A</span>Muziek van Canva</div>
+      <div class="opt right"><span class="n">B</span>De titel, de maker en <strong>Canva</strong></div>
+      <div class="opt"><span class="n">C</span>Niets: de muziek is gratis</div>
+    </div>
+  </div>
+  <p class="answer">De titel, de maker en Canva. Wie iets van een ander gebruikt, noemt de maker. Ook als het mag.</p>
+  <template class="note">
+    <p><strong>Controle (1'). Iedereen antwoordt tegelijk</strong>: 1, 2 of 3 vingers voor A, B of C. Kijk rond en onthoud wie A of C toont.</p>
+    <p>Wie A kiest: <em>"Zonder titel en maker weet je niet van wie de muziek is."</em> Wie C kiest: <em>"Gratis betekent niet zonder maker."</em></p>
+    <p>Druk op → voor het antwoord en zeg: <em>"Wie iets van een ander gebruikt, noemt de maker. Ook als het mag."</em> Wie fout had, komt zo meteen even bij je.</p>
+  </template>
+</section>
+
+<!-- 7 · samen stap 1 -->
+<section class="slide">
+  <p class="kicker">Samen · 3 minuten</p>
+  <h2>Iedereen doet stap 1</h2>
+  <div class="panel">
+    <ol class="steps1">
+      <li>Open de lespagina. Klik op <strong>Stap 1 · Klaarzetten</strong>.</li>
+      <li>Open het <strong>ontwerp van je groep</strong> in Canva en speel de trailer één keer af.</li>
+      <li>Kies wie monteur is in stap 2: <strong>A</strong>.</li>
+      <li>Klaar? Steek je <strong>duim</strong> op.</li>
+    </ol>
+  </div>
+  <template class="note">
+    <p><strong>Samen (3').</strong> Iedereen doet stap 1 tegelijk, de groepen zitten samen. Loop rond: lespagina en Canva in twee tabbladen? Staat het ontwerp bij <em>Met jou gedeeld</em>? Wie is monteur in stap 2 (A)?</p>
+    <p>Duim op bij de meesten: ga naar de volgende dia. Wie op de controlevraag fout had of hier vastloopt, blijft 3 tot 5 minuten bij je. De rest begint aan stap 2.</p>
+    <p>Zeg één zin over <em>Toon stapjes</em>: <em>"Weet je niet hoe het moet? Klik op Toon stapjes, dan zie je elk klein stapje met een beeld."</em> Zeg ook: <em>"Bij elke stap staat wie monteur is. Eén monteur tegelijk op de tijdlijn."</em></p>
+  </template>
+</section>
+
+<!-- 8 -->
+<section class="slide compact met-mascotte">
+  <img class="mascotte" src="assets/mascotte/dalton_laptop.webp" alt="" width="240" height="240">
+  <p class="kicker">Keuzewerktijd · <span class="eindtijd">40 minuten</span></p>
+  <h2>Zo werk je verder</h2>
+  <div class="two" style="grid-template-columns: 1.5fr 1fr; gap: 24px">
+    <div>
+      <ol class="steps1 kloklijst" data-lesmomenten="2026-11-12/14.35/15.25/3MWWE/8" data-beltijden="8.25-9.15 9.15-10.05 10.25-11.15 11.15-12.05 12.05-12.55 13.45-14.35 14.35-15.25 15.25-16.15 16.15-17.05">
+        <li data-min="3" data-samen>Klaarzetten <span class="klok tijd">samen &#10003;</span></li>
+        <li data-min="14">Afwerken met de checklist <span class="klok tijd">14'</span></li>
+        <li data-min="7">De aftiteling <span class="klok tijd">7'</span></li>
+        <li data-min="8">Samen nakijken <span class="klok tijd">8'</span></li>
+        <li data-min="8">Delen en inleveren <span class="klok tijd">8'</span></li>
+      </ol>
+    </div>
+    <div class="panel navy">
+      <p style="font-size:25px"><strong>Vast?</strong></p>
+      <p class="vast5" style="font-size:25px">1. <em>Toon stapjes</em><br>2. Je groep<br>3. Ik</p>
+      <p style="margin-top:14px;font-size:22px">Vink af in de <strong>checklist</strong>.</p>
+    </div>
+  </div>
+  <p class="klok" style="margin-top:14px;font-size:23px">
+    <strong>Alles staat in de opdracht in <span class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span></strong> <em>Projectles 3 — Afwerken en inleveren</em>: de lespagina. Iedereen levert zelf in: de link van het ontwerp van de groep, vóór vrijdag 20.00 uur.<br>Adres: jonasdaltongent.github.io/Trailer-DaltonMovies/<!-- PAS AAN --></p>
+  <template class="note">
+    <p><strong>Keuzewerktijd, 40'.</strong> Laat deze dia staan zolang ze werken. <strong>De kloktijden</strong> komen uit de planning; te vroeg getoond, of geef je de les op een ander uur? Druk op <strong>T</strong>: dan rekent de dia vanaf nu tot de bel.</p>
+    <p><strong>Eerste rondgang (stap 2):</strong> eerst de groepen die in projectles 2 achterstonden. Loopt het recept? Stopt de trailer vóór het einde van het verhaal? Vraag: <em>"Welk beeld is jullie opening? Wat verklapt de trailer nog?"</em> Is er één monteur tegelijk?</p>
+    <p><strong>Tweede rondgang (stap 4 en 5):</strong> staat de muziek in de aftiteling, met titel en maker? Heeft <strong>elk</strong> groepslid de link ingeleverd? Staat het toegangsniveau op <em>GO! Dalton Gent</em>? Vraag: <em>"Waar komt deze muziek vandaan? Wie zie je herkenbaar in beeld, en weten ze dat de trailer getoond wordt?"</em></p>
+    <p><strong>Laatste minuut:</strong> dia 9. Zeg mondeling: <em>"Lever in, ook als het nog niet perfect is. Tot vrijdag 20.00 uur mag je de trailer nog verbeteren: de link blijft dezelfde."</em></p>
+    <p><strong>Vergeet niet</strong> het adres op deze dia aan te passen als de repository anders heet.</p>
+  </template>
+</section>
+
+<!-- 9 -->
+<section class="slide met-mascotte" data-answer>
+  <img class="mascotte" src="assets/mascotte/dalton_hulp.webp" alt="" width="240" height="240">
+  <p class="kicker">Afsluiten · laatste minuut</p>
+  <h2>Wat lever je in?</h2>
+  <div class="qcol">
+    <p style="font-size:28px;font-weight:700;margin:0 0 6px">Wat voeg je toe bij Jouw werk in Classroom?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">A</span>De trailer als mp4-bestand</div>
+      <div class="opt right"><span class="n">B</span>De link naar het Canva-ontwerp van onze groep</div>
+      <div class="opt"><span class="n">C</span>Alleen jij levert in voor de hele groep</div>
+    </div>
+  </div>
+  <p class="answer">De link naar het ontwerp van de groep. Iedereen levert zelf in.</p>
+  <p style="margin-top:10px;font-size:24px">Lever in, ook als het nog niet perfect is: tot <strong>vrijdag 20.00 uur</strong> mag je verbeteren.</p>
+  <template class="note">
+    <p><strong>Afsluiting, laatste minuut van de keuzewerktijd.</strong> Twee of drie leerlingen antwoorden; druk dan op → voor het antwoord.</p>
+    <p>Zeg mondeling: <em>"Lever in, ook als het nog niet perfect is. Tot vrijdag 20.00 uur mag je de trailer nog verbeteren: de link blijft dezelfde."</em> Vooruitblik: het eindproduct wordt getoond op het slotmoment van vrijdag 13 november.</p>
+  </template>
+</section>
+
+</div></div>
+<div class="notes" id="notes"></div>
+<script src="js/slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "lesid": "movies-trailer",
+  "lesnr": "P3",
+  "titel": "Projectles 3 - Afwerken en inleveren (Dalton @ the movies, Canva)",
+  "week": 10,
+  "schooljaar": "2026-2027",
+  "datum": "2026-11-12",
+  "_opmerking_datum": "Donderdag 12 november 2026, 8ste lesuur, lokaal 18. Projectles 3 van Dalton @ the movies (lessenplan MWW, § 7): in de plaats van een les uit het lessenplan.",
+  "klasgroepen": [
+    "3 MWW"
+  ],
+  "_opmerking_klasgroepen": "De klasgroepcode moet '3 MWW' zijn (met spatie): daarmee vindt _tools/update_leerdoelen.py het blad. De echte klasnaam staat hieronder.",
+  "klasnaam": "3MWWE",
+  "finaliteit": "doorstroomfinaliteit",
+  "lesduur_minuten": 50,
+  "evaluatie": "summatief: 20 punten op het eindproduct (de trailer in Canva), met een checklist (Jonas, 06-11-2026)",
+  "deadline": "2026-11-13T20:00",
+  "bron": "https://github.com/jonasdaltongent/Trailer-DaltonMovies",
+  "doelen": [
+    {
+      "code": "BV2_04.02",
+      "rol": "kern"
+    },
+    {
+      "code": "BV2_04.04",
+      "rol": "ondersteunend"
+    },
+    {
+      "code": "BV2_04.03",
+      "rol": "ondersteunend"
+    },
+    {
+      "code": "BV2_05.01",
+      "rol": "ondersteunend"
+    }
+  ]
+}

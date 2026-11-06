@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="toestel" content="windows">
+<meta name="programma" content="canva">
+  <title>Lespagina · Projectles 3 · Afwerken en inleveren · Dalton @ the movies</title>
+  <link rel="icon" href="assets/logos/lespagina-icon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-storage="movies-trailer_v1_" data-modus-start="kort" data-laatste-stap="5" data-ai-hulp="uit">
+
+<!-- Pictogrammen: eenvoudige lijntekeningen, eigen werk. Gebruik: een svg met class "ic" en daarin use met href naar het symbool. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4 2.5 4H5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.5c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2a5 5 0 0 1 5 5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M4 14v6h16v-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10.5V6a1.5 1.5 0 0 1 3 0v7.5"/><path d="M8 11.5l-1.5-1.5a1.6 1.6 0 0 0-2.3 2.3l3.6 4.2A6.5 6.5 0 0 0 17 13.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6h.01"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-cut" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5L20 18M8 15.5L20 6"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-move" viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></symbol>
+</svg>
+
+<div class="teacher-banner">Leraarweergave: de roze kaders tonen waar je een screenshot kan plaatsen. Leerlingen zien die kaders niet.</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" title="Naar het begin van de les">
+      <img src="assets/movies-logo.svg" alt="Dalton @ the movies">
+      <span class="brand-lesson">Projectles 3 · Afwerken en inleveren</span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <img class="dalton-mark" src="assets/dalton-gent-logo.png" alt="GO! Dalton Gent">
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ============ LINKS: de route ============ -->
+  <nav class="route" aria-label="Stappenplan">
+    <p class="route-title">Stappenplan</p>
+    <button class="nav-btn" type="button" data-step="start"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="nav-lbl">Start</span></button>
+    <button class="nav-btn" type="button" data-step="theorie"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><span class="nav-lbl">Theoriekaart</span></button>
+
+    <p class="route-group">Afwerken</p>
+    <button class="nav-btn" type="button" data-step="1"><span class="nav-num"><span class="nav-n">1</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Klaarzetten</span></button>
+    <button class="nav-btn" type="button" data-step="2"><span class="nav-num"><span class="nav-n">2</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Afwerken met de checklist</span></button>
+    <button class="nav-btn" type="button" data-step="3"><span class="nav-num"><span class="nav-n">3</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">De aftiteling</span></button>
+
+    <p class="route-group">Nakijken en inleveren</p>
+    <button class="nav-btn" type="button" data-step="4"><span class="nav-num"><span class="nav-n">4</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Samen nakijken</span></button>
+    <button class="nav-btn" type="button" data-step="5"><span class="nav-num"><span class="nav-n">5</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Delen en inleveren</span></button>
+    <button class="nav-btn extra" type="button" data-step="extra"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="nav-lbl">Extra</span></button>
+  </nav>
+
+  <!-- ============ MIDDEN: één stap tegelijk ============ -->
+  <main id="main">
+
+    <!-- ===== START ===== -->
+    <section class="pane" id="pane-start" aria-labelledby="h-start">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-where">Toegepaste Informatica · projectles 3</span></div>
+            <h1 id="h-start">Afwerken en inleveren</h1>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_welkom.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Vandaag werkt je groep de trailer af: een aftiteling met jullie namen en de bron van de muziek, samen nakijken met de checklist, en dan lever je de link van jullie ontwerp in. Er staan 20 punten op.</p>
+
+          <h2 class="sec">Wat heb je nodig?</h2>
+          <ol class="nodig">
+            <li class="nodig-item">
+              <div class="mock mock-opdracht" aria-hidden="true">
+                <div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Projectles 3 — Afwerken en inleveren</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip"><span>+ Toevoegen of maken</span></div><div class="mo-knop">Inleveren</div></div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/classroom.svg" alt="">De opdracht in Google Classroom</p>
+              <p class="nodig-uitleg">Hier vind je de lespagina. Op het einde voeg je hier de link van jullie ontwerp toe en lever je in.</p>
+            </li>
+            <li class="nodig-item">
+              <div class="mock mock-lespagina" aria-hidden="true">
+                <div class="ml-balk"></div>
+                <div class="ml-midden">
+                  <div class="ml-route"><span></span><span></span><span></span><span></span></div>
+                  <div class="ml-stap"><span class="ml-tag">Stap 1</span><span class="ml-lijn"></span><span class="ml-lijn kort"></span><span class="ml-lijn"></span></div>
+                </div>
+                <div class="ml-hier">Je bent hier</div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/lespagina.webp" alt="">Deze lespagina</p>
+              <p class="nodig-uitleg">Hier lees je wat je moet doen, stap voor stap. Bij elke stap staat wie monteur is.</p>
+            </li>
+            <li class="nodig-item">
+              <div class="mock mock-ontwerp" aria-hidden="true">
+                <div class="mo-canva">
+                  <div class="mo-canva-balk">Canva</div>
+                  <div class="mo-canva-beeld"><span></span></div>
+                  <div class="tl3">
+                    <div class="tl3-rij"><div class="tl3-spoor"><span class="tl3-blok tl3-tekst" style="--x:70%;--b:16%"></span></div></div>
+                    <div class="tl3-rij"><div class="tl3-hoofd"><div class="tl3-groep" style="--w:5"><div class="tl3-clips"><span class="tl-clip"></span><span class="tl-clip"></span><span class="tl-clip"></span></div></div><div class="tl3-groep" style="--w:1"><div class="tl3-clips"><span class="tl3-aftit"></span></div></div></div></div>
+                    <div class="tl3-rij"><div class="tl3-spoor"><span class="tl3-blok tl3-muziek" style="--x:0;--b:100%"></span></div></div>
+                  </div>
+                </div>
+                <div class="gsm"><div class="gsm-scherm"><div class="gsm-balk"><span>Canva</span></div><div class="gsm-beeld"><span></span></div><div class="gsm-tijdlijn"><i></i><i></i><i></i></div><div class="gsm-werkbalk"><span class="gsm-tab"><i></i></span><span class="gsm-tab"><i></i></span><span class="gsm-tab"><i></i>Uploads</span></div></div></div>
+              </div>
+              <p class="nodig-naam"><svg class="ic" aria-hidden="true"><use href="#i-film"/></svg> Het Canva-ontwerp van je groep</p>
+              <p class="nodig-uitleg">Hier werk je de trailer af. Je gsm met de Canva-app heb je nodig als er nog een clip ontbreekt.</p>
+            </li>
+          </ol>
+          <p class="nodig-noot">Canva zelf open je in stap 1, in een tabblad van Chrome. Daarna lever je in: iedereen van de groep zelf.</p>
+
+          <h2 class="sec">Dit maak je vandaag</h2>
+          <div class="vandaag">
+            <div class="tl3" role="img" aria-label="Tekening van de tijdlijn met drie lagen. Bovenaan staat de titel op de bovenste track. In het midden staan de clips op de hoofdtrack, helemaal achteraan gevolgd door een witte pagina: de aftiteling. Onderaan loopt de muziek op de audiotrack, met een vervaging aan het begin en aan het einde.">
+              <div class="tl3-rij"><span class="tl3-naam">Bovenste track</span><div class="tl3-spoor"><span class="tl3-blok tl3-tekst" style="--x:66%;--b:16%">Titel</span></div></div>
+              <div class="tl3-rij"><span class="tl3-naam">Hoofdtrack</span><div class="tl3-hoofd">
+                <div class="tl3-groep" style="--w:12"><b>De trailer in vijf blokken</b><div class="tl3-clips"><span class="tl-clip"></span><span class="tl-clip"></span><span class="tl-clip"></span><span class="tl-clip"></span><span class="tl-clip"></span><span class="tl-clip"></span></div></div>
+                <div class="tl3-groep" style="--w:3"><b>Aftiteling</b><div class="tl3-clips"><span class="tl3-aftit">Namen</span></div></div>
+              </div></div>
+              <div class="tl3-rij"><span class="tl3-naam">Audiotrack</span><div class="tl3-spoor"><span class="tl3-blok tl3-muziek" style="--x:0;--b:100%"></span></div></div>
+            </div>
+            <p>Jullie trailer, afgewerkt: de titel, de clips, de muziek, en achteraan een witte pagina met jullie namen en de bron van de muziek.</p>
+          </div>
+
+          <h2 class="sec">Na deze les kan je</h2>
+          <ul class="doelen">
+            <li>je trailer nakijken met de checklist en afwerken wat ontbreekt;</li>
+            <li>een aftiteling maken met de namen van je groep en de titel, de maker en de bron van de muziek;</li>
+            <li>je ontwerp delen met een link die iedereen van de school kan bekijken, en die link inleveren in Classroom.</li>
+          </ul>
+
+          <h2 class="sec">Vast? Probeer het in deze volgorde</h2>
+          <ol class="vast">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg><span>Klik in de stap op <em>Toon stapjes</em></span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Je groep</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg><span>Je leraar</span></li>
+          </ol>
+
+          <p class="start-cta"><button class="btn btn-primary" type="button" data-goto="1">Start met stap 1 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== THEORIEKAART ===== -->
+    <section class="pane" id="pane-theorie" aria-labelledby="h-theorie">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-where">Spiekbriefje</span></div>
+          <h2 id="h-theorie">Theoriekaart</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Alles op één plek. Kom hier terug als je iets niet meer weet.</p>
+          <div class="t-grid">
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg>Het project</h3>
+              <ul>
+                <li>Elke groep van drie maakt een <strong>filmtrailer</strong>. <strong>Informatica: de montage, in Canva.</strong></li>
+                <li>Drie projectlessen: kennismaken (22 oktober) · muziek, tekst en geluid (29 oktober) · <strong>vandaag afwerken en inleveren</strong>.</li>
+                <li>Het eindproduct wordt getoond op het slotmoment, vrijdag 13 november.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>De monteur wisselt</h3>
+              <ul>
+                <li>Geef elkaar een letter: <strong>A</strong>, <strong>B</strong> en <strong>C</strong>.</li>
+                <li>Bij elke stap staat bovenaan wie <strong>monteur</strong> is: die werkt op de tijdlijn.</li>
+                <li>De anderen lezen de checklist voor of zoeken iets op. Eén monteur tegelijk.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg>Het trailerrecept</h3>
+              <ul>
+                <li><strong>1 Opening</strong>: één beeld dat nieuwsgierig maakt.</li>
+                <li><strong>2 Wie?</strong> De personages.</li>
+                <li><strong>3 Het probleem</strong>: wat loopt er mis?</li>
+                <li><strong>4 Spanning</strong>: korte clips na elkaar.</li>
+                <li><strong>5 De titel</strong>, en stop.</li>
+                <li>Een trailer verklapt het einde niet.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Een titel die je kan lezen</h3>
+              <ul>
+                <li>Groot genoeg, en een kleur die afsteekt tegen de clip.</li>
+                <li>Lang genoeg in beeld: je moet hem twee keer kunnen lezen.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-move"/></svg>Overgangen</h3>
+              <ul>
+                <li>Zonder overgang springt de film meteen naar de volgende clip: een <strong>harde overgang</strong>.</li>
+                <li><strong>Oplossen</strong> laat de ene clip in de andere overlopen.</li>
+                <li>Weinig, en telkens dezelfde soort. In de spanning werkt een harde overgang het best.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Muziek en geluid</h3>
+              <ul>
+                <li>De stemmen in je clips moet je kunnen verstaan: zet de muziek <strong>zachter</strong>.</li>
+                <li><strong>Vervagen</strong>: de muziek begint en eindigt zacht.</li>
+                <li>Alleen muziek uit de bibliotheek van Canva. Een liedje van Spotify of YouTube uploaden mag niet.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-film"/></svg>De aftiteling</h3>
+              <ul>
+                <li>De pagina <strong>achteraan</strong> met wie de trailer maakte en van wie de muziek is.</li>
+                <li>Jullie <strong>voornamen</strong>, en de muziek: <strong>titel, maker en Canva</strong>.</li>
+                <li>Wie iets van een ander gebruikt, noemt de maker. Ook als het mag.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Wie er in beeld komt</h3>
+              <ul>
+                <li>Niemand mag je zonder toestemming filmen of je beeld tonen: dat is <strong>portretrecht</strong>.</li>
+                <li>Jullie trailer wordt getoond op het slotmoment: wie herkenbaar in beeld staat, moet dat weten.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Delen en inleveren</h3>
+              <ul>
+                <li>Je levert <strong>een link</strong> in, geen bestand: de link van het Canva-ontwerp van je groep.</li>
+                <li>Het <strong>toegangsniveau</strong> van de link: <em>GO! Dalton Gent</em> = iedereen van de school kan met de link kijken.</li>
+                <li>Elk groepslid levert zelf in. De link blijft dezelfde: je kan het ontwerp nog verbeteren tot de deadline.</li>
+              </ul>
+            </section>
+            <section class="t-card wide">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg>Woorden</h3>
+              <table class="t-rows">
+                <tr><th>trailer</th><td>een korte reclamefilm die nieuwsgierig maakt naar een film, zonder het einde te verklappen</td></tr>
+                <tr><th>aftiteling</th><td>de pagina achteraan met de namen van wie de film maakte en de bronnen, bijvoorbeeld de muziek</td></tr>
+                <tr><th>bron</th><td>van wie iets komt dat je gebruikt: bij muziek de titel en de maker</td></tr>
+                <tr><th>licentie</th><td>de toestemming van de maker om zijn werk te gebruiken, met de regels erbij</td></tr>
+                <tr><th>toegangsniveau</th><td>wie met de link van je ontwerp mag kijken: alleen jij, of iedereen van de school</td></tr>
+                <tr><th>eigenaar</th><td>wie het ontwerp maakte; die kan het delen</td></tr>
+                <tr><th>portretrecht</th><td>niemand mag je zonder toestemming filmen of je beeld tonen</td></tr>
+              </table>
+            </section>
+            <section class="t-card wide warn">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>Veelgemaakte fouten</h3>
+              <ul>
+                <li>De trailer vertelt de hele film na, met het einde erbij.</li>
+                <li>Een liedje van Spotify of YouTube uploaden in plaats van muziek uit Canva.</li>
+                <li>In de aftiteling alleen <em>Muziek van Canva</em>, zonder titel en maker.</li>
+                <li>De link van het ontwerp delen terwijl het toegangsniveau nog op <em>Alleen jij hebt toegang</em> staat: je leraar kan het dan niet openen.</li>
+                <li>Een link naar een ander ontwerp inleveren, of naar de lijst met projecten.</li>
+                <li>Denken dat één groepslid inlevert voor de hele groep: iedereen levert zelf in.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== STAP 1 ===== -->
+    <section class="pane" id="pane-1" aria-labelledby="h-1">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 1</span><span class="tag tag-where">Canva</span></div>
+          <h2 id="h-1">Klaarzetten</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Je opent het ontwerp van je groep en speelt de trailer één keer af.</p>
+          <p class="monteur samen"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span><strong>Samen.</strong> Geef elkaar een letter: <strong>A</strong>, <strong>B</strong> en <strong>C</strong>. Zo weten jullie bij elke stap wie monteur is.</span></p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst"><strong>Iedereen:</strong> klik op <a class="btn btn-primary btn-open" href="https://www.canva.com" target="_blank" rel="noopener">Open Canva</a></span><span class="sub">Het opent in een nieuw tabblad. Meld je aan met je schoolaccount.</span></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Iedereen:</strong> open het ontwerp van je groep.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik links op <strong>Projecten</strong> en dan op <strong>Met jou gedeeld</strong>. Klik op het ontwerp van je groep.<span class="sub">Maakte jij het ontwerp? Dan staat het bij je eigen projecten.</span></p><img class="mini" src="assets/stapjes/canva-met-jou-gedeeld.png" alt="Canva, Projecten. In de lijst staat Met jou gedeeld in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+<li><span class="doe-tekst">Druk op de <strong>spatiebalk</strong> en kijk naar de hele trailer. Wat moet er nog gebeuren?</span><span class="sub">Lees ook het tekstvak achteraan uit projectles 2: daar schreef je op wat er nog moest.</span></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst">Ontbreekt er een clip? Zet ze erin met de <strong>Canva-app</strong> op je gsm.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Open het ontwerp van je groep in de Canva-app: tik onderaan op <strong>Je ontwerpen</strong>, bovenaan op <strong>Alle projecten</strong> en dan op <strong>Met jou gedeeld</strong>.<span class="sub">Zoals in projectles 1. De beelden komen van Canva in de browser van een gsm: in de app ziet het er bijna zo uit.</span></p><img class="mini" src="assets/stapjes/gsm-met-jou-gedeeld.png" alt="Canva op een gsm: het lijstje Je ontwerpen is open. Met jou gedeeld staat in een rood kader." loading="lazy"></li>
+    <li><p>Tik in de werkbalk onderaan op <strong>Uploads</strong>, kies de clip en <strong>tik erop</strong>.<span class="sub">Pas als je op de clip tikt, staat ze in het ontwerp.</span></p><img class="mini" src="assets/stapjes/gsm-uploads.png" alt="De editor van Canva op een gsm. In de werkbalk onderaan staat Uploads in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+<li><span class="doe-tekst">Spreek af wie monteur is in stap 2: <strong>A</strong>.</span></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Weet je de letters van projectles 2 niet meer?</strong> Geef elkaar gewoon opnieuw A, B en C.</p></div>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="start"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Start</button>
+          <button class="btn btn-primary" type="button" data-goto="2">Stap 2 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 2 ===== -->
+    <section class="pane" id="pane-2" aria-labelledby="h-2">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 2</span><span class="tag tag-where">Canva, de tijdlijn</span></div>
+          <h2 id="h-2">Afwerken met de checklist</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Je kijkt wat er nog ontbreekt en werkt het af. De checklist hieronder zegt waarop je punten krijgt.</p>
+          <p class="monteur"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Monteur: <span class="mon-letter">A</span> <strong>B</strong> en <strong>C</strong> wijzen aan wat er nog ontbreekt.</span></p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst">Lees samen de <strong>checklist</strong> hieronder. Wat ontbreekt er nog in jullie trailer?</span></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Monteur:</strong> kort in wat te lang is, en haal weg wat er niet in hoort.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik de clip aan en sleep de <strong>linkerrand</strong> of de <strong>rechterrand</strong> naar binnen.<span class="sub">Staat iemand nog klaar of lacht hij net? Kort de clip in tot dat stukje weg is.</span></p></li>
+    <li><p>Wil je een stuk uit het midden weg? Klik in de clip op de plek en druk op <strong>S</strong>. Klik het stuk aan dat weg moet en druk op <strong>Delete</strong>.<span class="sub">Te veel weg? Klik op de pijl <strong>Ongedaan maken</strong>, of druk op <strong>Ctrl + Z</strong>.</span></p></li>
+  </ol>
+</details></li>
+<li><span class="doe-tekst"><strong>Monteur:</strong> zoek lege of zwarte stukken tussen de clips en haal ze weg.</span><span class="sub">Zeker ook het einde van het verhaal: een trailer verklapt het niet.</span></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst">Staat de <strong>titel</strong> van de film er, groot en in een kleur die afsteekt? Zo niet: voeg hem toe.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik links op <strong>Tekst</strong> en dan op <strong>Voeg een tekstvak toe</strong>. Typ de titel.<span class="sub">Zoals in projectles 2.</span></p><img class="mini" src="assets/stapjes/canva-tekstvak.png" alt="Het tabblad Tekst in Canva. De paarse knop Voeg een tekstvak toe staat in een rood kader." loading="lazy"></li>
+    <li><p>Klik op de titel in het beeld. Typ bovenaan in het vak met het getal een groter getal, bijvoorbeeld <strong>100</strong>.</p><img class="mini" src="assets/stapjes/canva-tekst-grootte.png" alt="De balk boven het beeld als je een tekst aanklikt. Het vak met de lettergrootte staat in een rood kader." loading="lazy"></li>
+    <li><p>Klik op de <strong>A</strong> met de gekleurde streep en kies een kleur.<span class="sub">Een lichte clip? Kies een donkere kleur. Een donkere clip? Kies wit.</span></p><img class="mini" src="assets/stapjes/canva-tekst-kleur.png" alt="De balk boven het beeld. De A met een gekleurde streep, voor de kleur van de tekst, staat in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst">Overgangen: weinig, en telkens dezelfde soort.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Ga met de muis naar de plek <strong>tussen twee clips</strong> op de hoofdtrack. Klik op het knopje <strong>Transitie toevoegen</strong>.<span class="sub">Te veel verschillende overgangen? Klik op <strong>Overgang wijzigen</strong> en dan op <strong>Geen</strong>, of kies overal dezelfde.</span></p><img class="mini" src="assets/stapjes/canva-transitie-toevoegen.png" alt="De tijdlijn in Canva. Tussen twee clips staat het knopje Transitie toevoegen in een rood kader." loading="lazy"></li>
+    <li><p>Klik in het paneel <strong>Overgangen</strong> op <strong>Oplossen</strong>.</p><img class="mini" src="assets/stapjes/canva-oplossen.png" alt="Het paneel Overgangen in Canva. De tegel Oplossen staat in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst">Muziek uit Canva, zachter dan de stemmen, en zacht einde.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik het nummer in de tijdlijn aan en klik bovenaan op het luidsprekertje <strong>Volume</strong>.</p><img class="mini" src="assets/stapjes/canva-volume-knop.png" alt="De balk boven het beeld als een nummer gekozen is. Het luidsprekertje Volume staat in een rood kader." loading="lazy"></li>
+    <li><p>Sleep de schuif naar links, of typ een lager getal. Speel af: versta je de stemmen?</p><img class="mini" src="assets/stapjes/canva-volume-schuif.png" alt="Het paneel Volume. De schuif met het getal 20 staat in een rood kader." loading="lazy"></li>
+    <li><p>Klik bovenaan op <strong>Vervagen</strong> en sleep <strong>Vervaging aan het einde</strong> een beetje naar rechts.</p><img class="mini" src="assets/stapjes/canva-vervagen-schuif.png" alt="Het paneel Vervagen. De twee schuiven, Vervaging aan het begin en Vervaging aan het einde, staan in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Nog een clip nodig?</strong> Zet ze erin met de Canva-app op je gsm (<strong>Uploads</strong>, tik op de clip), zoals in stap 1.</p></div>
+          <div class="info" role="group" aria-labelledby="info-checklist">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-checklist">De checklist van je trailer</h3><span class="info-bij">bij handeling 1</span></div>
+            <div class="info-body">
+              <ul class="punten">
+                <li><b>Het trailerrecept</b><span>De vijf blokken, en het einde van het verhaal staat er niet in.</span><em>4 punten</em></li>
+                <li><b>Montage</b><span>Ingekort en gesplitst: geen lege of zwarte stukken, geen rommel aan het begin of einde van een clip.</span><em>3 punten</em></li>
+                <li><b>De titel</b><span>Groot, een kleur die afsteekt, lang genoeg om te lezen.</span><em>2 punten</em></li>
+                <li><b>Overgangen</b><span>Weinig en dezelfde soort; harde overgangen in de spanning.</span><em>2 punten</em></li>
+                <li><b>Muziek en geluid</b><span>Uit Canva, zachter dan de stemmen, vervaagt op het einde.</span><em>3 punten</em></li>
+                <li><b>De aftiteling</b><span>De voornamen van de groep en de muziek met titel, maker en Canva.</span><em>3 punten</em></li>
+                <li><b>Ingeleverd</b><span>Jij leverde zelf de link in, vóór de deadline.</span><em>3 punten</em></li>
+              </ul>
+              <p class="punten-tot">Samen 20 punten. Jullie leraar kijkt het ontwerp na in Canva.</p>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="1"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 1</button>
+          <button class="btn btn-primary" type="button" data-goto="3">Stap 3 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 3 ===== -->
+    <section class="pane" id="pane-3" aria-labelledby="h-3">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 3</span><span class="tag tag-where">Canva, achteraan in de tijdlijn</span></div>
+          <h2 id="h-3">De aftiteling</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Achteraan komt een pagina met wie de trailer maakte en van wie de muziek is.</p>
+          <p class="monteur"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Monteur: <span class="mon-letter">B</span> <strong>A</strong> en <strong>C</strong> zoeken op wat er in de aftiteling moet staan.</span></p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Monteur:</strong> voeg achteraan een lege pagina toe.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik in de tijdlijn rechts van de laatste clip op het grijze <strong>+</strong>.</p></li>
+    <li><p>Klik op <strong>Leeg</strong>.<span class="sub">De nieuwe pagina duurt 5 seconden. Dat is genoeg. Je ziet ze achteraan, na de laatste clip.</span></p></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Monteur:</strong> zet jullie voornamen op de pagina.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik links op <strong>Tekst</strong> en dan op <strong>Voeg een tekstvak toe</strong>.<span class="sub">Klik eerst op de nieuwe pagina in de tijdlijn: dan komt het tekstvak op die pagina.</span></p></li>
+    <li><p>Typ <em>Een trailer van</em> en de <strong>voornamen</strong> van de drie groepsleden.<span class="sub">Alleen voornamen: de trailer wordt getoond op het slotmoment.</span></p></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Monteur:</strong> zet eronder de muziek: de titel, de maker en <em>(Canva)</em>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Typ <em>Muziek:</em> en de titel tussen aanhalingstekens, een streepje, de maker en <em>(Canva)</em>.<span class="sub">Staat dat al in het tekstvak achteraan uit projectles 2? Neem het over en verwijder dat tekstvak.</span></p></li>
+    <li><p>Weet je de titel of de maker niet meer? Klik het nummer in de audiotrack aan: de <strong>titel</strong> staat in de balk. Zoek die titel bij <strong>Elementen</strong>: de <strong>maker</strong> staat onder de titel in de lijst.<span class="sub">Luister niet naar het nummer door erop te klikken in de lijst: een klik zet het nummer opnieuw in je ontwerp.</span></p></li>
+  </ol>
+</details></li>
+<li><span class="doe-tekst">Kies een tekstkleur die afsteekt, en speel de aftiteling af. Kan je alles lezen?</span><span class="sub">De pagina is zwart of wit, volgens je ontwerp. Zwart? Kies wit voor de tekst.</span></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Zie je de aftiteling niet in beeld?</strong> Kijk of het tekstvak op de nieuwe pagina staat en niet op een clip ervoor. Sleep het blok in de tijdlijn naar de nieuwe pagina.</p></div>
+          <div class="info" role="group" aria-labelledby="info-aftiteling">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-aftiteling">Waarom een aftiteling?</h3><span class="info-bij">bij handeling 2 en 3</span></div>
+            <div class="info-body">
+              <div class="aftit-uitleg">
+                <div class="aftit" role="img" aria-label="Tekening van de aftiteling: een donkere pagina met in het midden de tekst Een trailer van, drie voornamen, en eronder Muziek, de titel tussen aanhalingstekens, een streepje, de maker en Canva tussen haakjes."><b>Een trailer van Voornaam, Voornaam en Voornaam</b><span>Muziek: “Titel” – Maker (Canva)</span></div>
+                <ul class="doelen">
+                  <li>Wie iets van een ander gebruikt, noemt de <strong>maker</strong>. Ook als het mag: Canva geeft je de licentie.</li>
+                  <li>Zo weet de kijker wie de trailer maakte en van wie de muziek is.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="2"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 2</button>
+          <button class="btn btn-primary" type="button" data-goto="4">Stap 4 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 4 ===== -->
+    <section class="pane" id="pane-4" aria-labelledby="h-4">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 4</span><span class="tag tag-where">Canva</span></div>
+          <h2 id="h-4">Samen nakijken</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Jullie kijken naar de trailer zoals een kijker: van begin tot einde, met de checklist erbij.</p>
+          <p class="monteur"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Monteur: <span class="mon-letter">C</span> <strong>A</strong> en <strong>B</strong> lezen de checklist voor.</span></p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst"><strong>Samen:</strong> speel de hele trailer af, van begin tot einde.</span><span class="sub">Met oortjes, of zacht. Druk op de <strong>spatiebalk</strong>.</span></li>
+<li><span class="doe-tekst">Loop de <strong>checklist</strong> van stap 2 na, criterium per criterium. Verbeter wat niet klopt.</span><span class="sub">De monteur verbetert. De anderen lezen voor en kijken mee.</span></li>
+<li><span class="doe-tekst"><strong>Wie in beeld?</strong> Weet iedereen die herkenbaar in beeld staat dat de trailer getoond wordt?</span><span class="sub">Niet zeker? Vraag het, of laat de clip weg.</span></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Monteur:</strong> geef het ontwerp een duidelijke naam: <em>Trailer – de titel van de film</em>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik bovenaan op de naam van het ontwerp, typ de nieuwe naam en druk op <strong>Enter</strong>.<span class="sub">Zo vindt je leraar het ontwerp snel terug.</span></p></li>
+  </ol>
+</details></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Je trailer is langer dan de muziek, of de muziek langer dan de trailer?</strong> Klik het nummer aan en sleep zijn rechterrand tot onder het einde van de laatste clip.</p></div>
+          <div class="info" role="group" aria-labelledby="info-beeld">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-beeld">Wie mag in beeld?</h3><span class="info-bij">bij handeling 3</span></div>
+            <div class="info-body">
+              <ul class="mag">
+                <li class="let"><strong>Filmen is niet hetzelfde als tonen.</strong> Iemand die toestemming gaf om gefilmd te worden, weet daarom nog niet dat de trailer op het slotmoment getoond wordt.</li>
+                <li>Wie herkenbaar in beeld staat, weet dat de trailer <strong>getoond</strong> wordt aan de klas en de leerkrachten.</li>
+                <li class="nee">Wil iemand niet in beeld? Laat de clip dan weg. Dat telt niet als fout.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="3"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 3</button>
+          <button class="btn btn-primary" type="button" data-goto="5">Stap 5 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 5 ===== -->
+    <section class="pane" id="pane-5" aria-labelledby="h-5">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-step">Stap 5</span><span class="tag tag-where">Canva</span><span class="tag tag-where"><img class="logo" src="assets/logos/classroom.svg" alt=""> Google Classroom</span></div>
+            <h2 id="h-5">Delen en inleveren</h2>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_inleveren.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Je deelt de link van het ontwerp zodat je leraar het kan openen. Dan levert iedereen van de groep in Classroom in.</p>
+          <p class="monteur"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span><strong>De eigenaar</strong> (wie het ontwerp maakte) stelt het delen in. <strong>Iedereen</strong> levert daarna zelf in.</span></p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Eigenaar:</strong> zet het toegangsniveau van de link op <em>GO! Dalton Gent</em>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik rechtsboven op <span class="ui">Delen</span>.</p></li>
+    <li><p>Klik bij <strong>Toegangsniveau</strong> op het lijstje en kies <strong>GO! Dalton Gent</strong>.<span class="sub">Staat er daarna een rol naast? Kies <strong>Mag bekijken</strong>: bekijken, niet bewerken.</span></p><img class="mini" src="assets/stapjes/canva-delen-toegang.png" alt="Het venster Ontwerp delen in Canva. Bij Toegangsniveau staat het lijstje open; de keuze GO! Dalton Gent staat in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Iedereen:</strong> kopieer de link van het ontwerp.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik rechtsboven op <span class="ui">Delen</span> en dan op <strong>Link kopiëren</strong>.<span class="sub">Je ziet in Canva ook <strong>Naar leerkracht versturen</strong>. Wij leveren in via Classroom, niet via die knop.</span></p><img class="mini" src="assets/stapjes/canva-link-kopieren.png" alt="Het venster Ontwerp delen in Canva. De paarse knop Link kopiëren staat in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Iedereen:</strong> voeg de link toe in Google Classroom.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik bovenaan op het tabblad <strong class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</strong>.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome. Het tabblad Google Classroom staat in een rood kader."><span class="tt-tab wijs"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Projectles 3</span><span class="tt-tab actief"><svg class="ic" aria-hidden="true"><use href="#i-film"/></svg>Canva</span></div></li>
+    <li><p>Klik rechts, bij <strong>Jouw werk</strong>, op <span class="ui">Toevoegen of maken</span> en dan op <strong>Link</strong>.</p><div class="mock mock-opdracht mini-mock" role="img" aria-label="Tekening van de opdracht. Bij Jouw werk staat de knop Toevoegen of maken in een rood kader, daaronder de knop Inleveren."><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Projectles 3 — Afwerken en inleveren</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip wijs"><span>+ Toevoegen of maken</span></div><div class="mo-knop">Inleveren</div></div></div></li>
+    <li><p>Plak de link met <strong>Ctrl + V</strong> en voeg ze toe.<span class="sub">Het kan zijn dat de knop <strong>Toevoegen</strong> heet of <strong>Link toevoegen</strong>: klik op de knop die de link toevoegt.</span></p></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>Iedereen:</strong> klik op <span class="ui">Inleveren</span>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik rechts bij <strong>Jouw werk</strong> op <span class="ui">Inleveren</span>.</p></li>
+    <li><p>Klik in het venster <strong>Je werk inleveren?</strong> nog eens op <span class="ui">Inleveren</span>.<span class="sub">Daarna staat er rechts <strong>Ingeleverd</strong>.</span></p></li>
+  </ol>
+</details></li>
+            </ol>
+            <figure class="clip"><video src="assets/video/inleveren.mp4" poster="assets/video/inleveren.jpg" autoplay loop muted playsinline controls preload="metadata" aria-label="Filmpje: rechts, bij Jouw werk, op Inleveren klikken; in het venster Je werk inleveren? nog eens op Inleveren klikken; daarna staat er Ingeleverd."></video><figcaption>Filmpje van 10 seconden: zo lever je in. Het is een andere opdracht, de knoppen zijn dezelfde.</figcaption></figure>
+          </div>
+          <div class="tip warn"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><strong>Vraagt je link om toegang?</strong> Dan staat het toegangsniveau nog op <em>Alleen jij hebt toegang</em>. Vraag de eigenaar om het aan te passen.</p></div>
+          <p style="margin:.2rem 0 0;color:var(--muted)">Elk groepslid levert zelf in. De link blijft dezelfde: tot vrijdag 13 november om 20.00 uur mag je de trailer nog verbeteren.</p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="4"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 4</button>
+          <button class="btn btn-primary" type="button" data-goto="extra">Extra <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP EXTRA ===== -->
+    <section class="pane" id="pane-extra" aria-labelledby="h-extra">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-extra">Extra · niet verplicht</span></div>
+          <h2 id="h-extra">Nog even verder</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Voor wie nog tijd heeft. Het telt niet mee voor je punten.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat kan je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes" open><summary><span class="doe-tekst"><strong>De voice-over</strong> inspreken met je <strong>gsm</strong>, als jullie de Engelse tekst van Engels al hebben.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Open het ontwerp van je groep in de <strong>Canva-app</strong>, zoals in stap 1. Zoek een rustige hoek van het lokaal.<span class="sub">De computers in het lokaal hebben geen microfoon: opnemen gaat alleen met je gsm.</span></p></li>
+    <li><p>Zet de afspeelkop waar de stem moet beginnen. Tik op <strong>Audio toevoegen</strong> en dan op <strong>Voice-over opnemen</strong>.<span class="sub">Vraagt de app naar je microfoon? Tik op <strong>Toegang verlenen</strong>.</span></p></li>
+    <li><p>Tik op <strong>Opnemen</strong> en spreek de tekst in. Tik op <strong>Voltooien</strong>: de opname komt in het ontwerp.<span class="sub">Niet goed? Tik op de prullenbak en begin opnieuw.</span></p></li>
+    <li><p>Op de computer: zet de muziek nog zachter, zodat je de stem goed verstaat.</p></li>
+  </ol>
+</details></li>
+<li><details class="stapjes" open><summary><span class="doe-tekst">De trailer <strong>downloaden als mp4</strong> voor het slotmoment. Doe dit alleen als je leraar het vraagt.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+  <ol class="klein">
+    <li><p>Klik rechtsboven op <span class="ui">Delen</span> en dan op <strong>Downloaden</strong>.</p></li>
+    <li><p>Bij <strong>Bestandstype</strong> staat <strong>MP4-video</strong>. Klik op de knop <strong>Downloaden</strong>.<span class="sub">Canva meldt dat video's met muziek uit de bibliotheek alleen voor persoonlijk en niet-commercieel gebruik zijn: de trailer blijft op school. Het bestand komt op de computer, niet in Drive.</span></p><img class="mini" src="assets/stapjes/canva-downloaden.png" alt="Het venster Downloaden in Canva. Bij Bestandstype staat MP4-video in een rood kader." loading="lazy"></li>
+  </ol>
+</details></li>
+            </ol>
+          </div>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="5"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 5</button>
+          <button class="btn" type="button" data-goto="start">Naar het begin</button>
+        </footer>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ============ RECHTS: de checklist ============ -->
+  <aside class="checklist leeg" id="checklist" aria-labelledby="h-cl">
+    <div class="cl-head">
+      <h2 id="h-cl">Checklist</h2>
+      <div class="cl-bar" role="progressbar" aria-label="Voortgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="cl-fill" id="clFill"></div></div>
+      <p class="cl-count" id="clCount">0 van 0 klaar</p>
+    </div>
+    <div class="cl-body">
+      <div class="cl-group" data-step="1"><h3>1 · Klaarzetten</h3>
+        <label class="cl-item"><input type="checkbox" id="c1a"><span>Het ontwerp van onze groep staat open, en we hebben elk een letter</span></label>
+        <label class="cl-item"><input type="checkbox" id="c1b"><span>Alle clips van onze groep staan in het ontwerp</span></label>
+      </div>
+      <div class="cl-group" data-step="2"><h3>2 · Afwerken met de checklist</h3>
+        <label class="cl-item"><input type="checkbox" id="c2a"><span>Onze clips staan in de vijf blokken van het recept, en het einde van het verhaal staat er niet in</span></label>
+        <label class="cl-item"><input type="checkbox" id="c2b"><span>Geen lege of zwarte stukken, en geen rommel aan het begin of einde van een clip</span></label>
+        <label class="cl-item"><input type="checkbox" id="c2c"><span>De titel staat in beeld: groot, een kleur die afsteekt, lang genoeg om te lezen</span></label>
+        <label class="cl-item"><input type="checkbox" id="c2d"><span>Weinig overgangen, telkens dezelfde soort</span></label>
+        <label class="cl-item"><input type="checkbox" id="c2e"><span>De muziek komt uit Canva, is zachter dan de stemmen en vervaagt op het einde</span></label>
+      </div>
+      <div class="cl-group" data-step="3"><h3>3 · De aftiteling</h3>
+        <label class="cl-item"><input type="checkbox" id="c3a"><span>Achteraan staat een pagina met de aftiteling</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3b"><span>Daarop staan de voornamen van onze groep</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3c"><span>Daarop staat de muziek met de titel, de maker en Canva</span></label>
+      </div>
+      <div class="cl-group" data-step="4"><h3>4 · Samen nakijken</h3>
+        <label class="cl-item"><input type="checkbox" id="c4a"><span>De hele trailer samen afgespeeld en de checklist nagelopen</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4b"><span>Wie herkenbaar in beeld staat, weet dat de trailer getoond wordt</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4c"><span>Het ontwerp heeft een duidelijke naam</span></label>
+      </div>
+      <div class="cl-group" data-step="5"><h3>5 · Delen en inleveren</h3>
+        <label class="cl-item"><input type="checkbox" id="c5a"><span>Het toegangsniveau van de link staat op GO! Dalton Gent</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5b"><span>Ik voegde de link van het ontwerp van onze groep toe in Classroom</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5c"><span>Ik klikte op Inleveren en zie Ingeleverd</span></label>
+      </div>
+    </div>
+    <div class="cl-foot">
+      <button class="btn cl-toggle" type="button" id="clToggle" aria-expanded="false">Toon alles</button>
+      <button class="btn" type="button" id="btnReset">Vinkjes wissen</button>
+      <p class="cl-note">Je vinkjes staan alleen op deze computer. Er wordt niets doorgestuurd.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- ============ Klaar! ============ -->
+<div class="klaar-overlay" id="klaar" role="dialog" aria-modal="true" aria-labelledby="h-klaar" hidden>
+  <div class="klaar-card">
+    <img class="mascotte-klaar" src="assets/mascotte/dalton_succes.webp" alt="" width="150" height="150">
+    <h2 id="h-klaar">Jullie trailer is af en ingeleverd!</h2>
+    <p>Alles is afgevinkt. Heb je nog tijd? Probeer dan de <strong>Extra</strong>.</p>
+    <p>Tot vrijdag 13 november om 20.00 uur mag je de trailer nog verbeteren: de link blijft dezelfde.</p>
+    <button class="btn btn-primary" type="button" id="klaarSluit">Sluiten</button>
+  </div>
+</div>
+
+<footer class="site">
+  Toegepaste Informatica · GO! Dalton Gent · Project Dalton @ the movies. Je clips en je muziek blijven in Canva, in het ontwerp van je groep: zet ze nergens anders online.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
