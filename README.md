@@ -64,7 +64,7 @@ Lespagina: <https://jonasdaltongent.github.io/Trailer-DaltonMovies/> · dia's: <
 ### Stap 2 — De opdracht in Classroom, met de koppeling
 
 Als **concept** in [3MWWE - Informatica](https://classroom.google.com/c/MjUzNjQyOTk0NDFa), onder het onderwerp **Project Dalton @ the movies**.
-Inplannen doet de hoofdsessie na het nakijken: Classroom publiceert dan zelf een half uur vóór de les, do 12-11 om 14.05 (`_afspraken/publiceren.md`).
+**Concept gemaakt op 06-11-2026** (titel *Projectles 3 — Afwerken en inleveren*, 20 punten, deadline vr 13-11 20.00 uur, alleen de link). Inplannen doet de hoofdsessie na het nakijken: Classroom publiceert dan zelf een half uur vóór de les, do 12-11 om 14.05 (`_afspraken/publiceren.md`).
 
 | | Opdracht: **Projectles 3 — Afwerken en inleveren** |
 |---|---|
